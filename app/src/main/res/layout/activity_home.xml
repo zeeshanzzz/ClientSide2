@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <!--<variable
+            name="presenter"
+            type="com.app.officeapp.View.Login.LoginActivityPresenter"/>-->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backdrop"
+        tools:context=".views.login.view.HomeActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="168dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sol"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/logoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/worldworksolution"
+            android:textColor="@color/colorwhite"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="172dp"
+            android:background="@drawable/round"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorwhite"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/logoName"
+            app:layout_constraintHorizontal_bias="0.547"
+            app:layout_constraintStart_toStartOf="@+id/logoName"
+            app:layout_constraintTop_toBottomOf="@+id/logoName" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle"
+            android:text="@string/signUp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/signupButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/signupButton"
+            app:layout_constraintTop_toBottomOf="@+id/signupButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

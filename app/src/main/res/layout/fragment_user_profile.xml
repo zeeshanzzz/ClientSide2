@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".userProfile.UserProfileFragment">
+
+
+        <ImageView
+            android:id="@+id/backGroundImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:background="#E05950"
+            android:contentDescription="TODO"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/circulardrawable"
+            android:src="@drawable/profilepic"
+            app:layout_constraintEnd_toEndOf="@+id/profileNameText"
+            app:layout_constraintStart_toStartOf="@+id/profileNameText"
+            app:layout_constraintTop_toBottomOf="@+id/profileNameText" />
+
+        <TextView
+            android:id="@+id/profileNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/zeeshan_ameer"
+            android:textColor="@color/colorwhite"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/backGroundImage"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/backGroundImage"
+            app:layout_constraintTop_toTopOf="@+id/backGroundImage" />
+
+        <TextView
+            android:id="@+id/On_Off_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/go_offline"
+            android:textColor="@color/colorblack"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        <com.github.angads25.toggle.widget.LabeledSwitch
+            android:id="@+id/toggleButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/colorAccent"
+            android:clickable="true"
+            android:textSize="14sp"
+            app:colorBorder="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="@+id/On_Off_TextView"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/On_Off_TextView"
+            app:layout_constraintTop_toBottomOf="@+id/On_Off_TextView" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/colorlight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toggleButton">
+
+
+            <TextView
+                android:id="@+id/workLocationView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/your_work_location"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/workAddressView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/dd_block_dha_phase_4_lahore_defence"
+                android:textColor="@color/colorblack"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workLocationView" />
+
+            <TextView
+                android:id="@+id/workRadiusView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/within_10km_work_radius"
+                android:textColor="@color/colorblack"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/workAddressView"
+                app:layout_constraintHorizontal_bias="0.477"
+                app:layout_constraintStart_toStartOf="@+id/workAddressView"
+                app:layout_constraintTop_toBottomOf="@+id/workAddressView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/pendingJobsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/pending_jobs"
+            android:textColor="@color/colorblack"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/PendingButton"
+            app:layout_constraintHorizontal_bias="0.539"
+            app:layout_constraintStart_toStartOf="@+id/PendingButton"
+            app:layout_constraintTop_toBottomOf="@+id/PendingButton" />
+
+        <TextView
+            android:id="@+id/upcomingJobView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/upcoming_jobs"
+            android:textColor="@color/colorblack"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/UpcomingButton"
+            app:layout_constraintHorizontal_bias="0.387"
+            app:layout_constraintStart_toStartOf="@+id/UpcomingButton"
+            app:layout_constraintTop_toBottomOf="@+id/UpcomingButton" />
+
+        <Button
+            android:id="@+id/PendingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circularbutton"
+            android:text="@string/_0"
+            android:textColor="@color/lightblue"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.193"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+        <Button
+            android:id="@+id/UpcomingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circularbutton2"
+            android:text="@string/_0"
+            android:textColor="@color/pink"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.795"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
